@@ -1,3 +1,26 @@
 .background-dark {
   background-color: #003478;
 }
+
+.background-white{
+  background-color: white;
+}
+
+.background-dark2 {
+  background-color: #051A35;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  min-height: 100vh;
+}
+
+.custom-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+
