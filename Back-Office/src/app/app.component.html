@@ -1,2 +1,9 @@
-<app-menu-lateral></app-menu-lateral>
-<app-footer></app-footer>
+<div class="custom-container d-flex flex-column" style="min-height: 100vh;">
+  <div class="row flex-grow-1 background-dark2">
+      <app-menu-lateral class="col-auto"></app-menu-lateral>
+      <div class="col d-flex flex-column background-dark2">
+          <app-user-information class="flex-grow-1"></app-user-information>
+      </div>
+  </div>
+  <app-footer></app-footer>
+</div>

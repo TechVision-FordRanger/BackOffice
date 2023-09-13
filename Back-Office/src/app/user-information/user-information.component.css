@@ -1,0 +1,9 @@
+.usarios-localidades {
+  height: 500px;
+  width: 100%; /* Isso é para garantir que ocupe todo o espaço da coluna, mas você pode ajustar como desejar */
+}
+
+.total-usuarios {
+  height: 600px;
+  width: 100%; /* Novamente, isso é para garantir que ocupe todo o espaço da coluna */
+}
