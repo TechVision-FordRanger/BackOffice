@@ -113,3 +113,22 @@ table {
   table-layout: fixed; /* garante que as colunas tenham a mesma largura */
 }
 
+.table-container::-webkit-scrollbar {
+  width: 6px;  /* Largura da barra vertical (mais fina) */
+  height: 6px; /* Altura da barra horizontal (mais fina) */
+}
+
+.table-container::-webkit-scrollbar-track {
+  background-color: #828282;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #003478;
+  border-radius: 3px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #0c78aa;
+}
+
+
