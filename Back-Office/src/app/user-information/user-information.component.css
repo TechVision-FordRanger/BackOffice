@@ -39,7 +39,7 @@
 }
 
 .marginButton{
-  margin-left: 80%;
+  margin-left: 78%;
   margin-top: 2%;
 }
 
@@ -47,8 +47,69 @@
   border-radius: 30px;
   border-color: white;
   font-size: 12px;
-  padding-right: 20% ;
-  padding-left: 20% ;
+  padding-right: 30% ;
+  padding-left: 30% ;
   font-weight: 600;
-
 }
+
+.btnStyle:hover{
+  background-color: #2980b9 !important; /* Cor de fundo do botão ao passar o mouse */
+  border-color: #ffffff !important;     /* Cor da borda do botão ao passar o mouse */
+}
+
+.btnStyle:active{
+  background-color: #2980b9 !important; /* Cor de fundo do botão ao passar o mouse */
+  border-color: #ffffff !important;     /* Cor da borda do botão ao passar o mouse */
+}
+
+.btnStyle.selected {
+  background-color: #2980b9;
+  border-color: #ffffff;
+}
+
+.dropStyle{
+  font-size: 12px;
+}
+
+.container-fluid{
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+.back {
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.table-container {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: auto;
+  height: 280px;
+}
+
+.custom-border {
+  border: 1px solid rgba(117, 117, 117, 0.574);
+}
+
+table {
+  width: 100%;  /* Garante que a tabela ocupe toda a largura do contêiner */
+  border-collapse: collapse;  /* Remove as bordas duplas entre células */
+  margin-bottom: 0;
+}
+
+.custom-border th, .custom-border td {
+  border: 1px solid rgba(117, 117, 117, 0.386);
+}
+
+.table-container tbody {
+  display: block;
+}
+
+.table-container thead,
+.table-container tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* garante que as colunas tenham a mesma largura */
+}
+
