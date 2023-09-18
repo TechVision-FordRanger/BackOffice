@@ -3,16 +3,11 @@
   padding: 0;
 }
 
-.usarios-localidades {
+.users-location {
   height: 500px;
   width: 100%;
   border-radius: 30px;
   padding-top: 20px;
-}
-
-.total-usuarios {
-  height: 600px;
-  width: 100%;
 }
 
 .title{
@@ -131,4 +126,65 @@ table {
   background-color: #0c78aa;
 }
 
+/*container total de usuarios */
 
+.total-users {
+  height: 600px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #EEEEEE;
+}
+
+
+.user-circle {
+  width: 25vmin;
+  height: 25vmin;
+  border-radius: 50%;
+  background-color: #051A35;
+  margin-bottom: 0px;
+  position: relative;
+  top: -10%; /* Ajuste conforme necessário */
+
+
+  .user-count {
+    color: #EEEEEE;
+    margin-top: 25%;
+  }
+
+  .user-label {
+    color: #EEEEEE;
+    font-size: 20px;
+    margin-top: 10%;
+  }
+}
+
+.info-header  {
+  font-size: 25px;
+  margin-right: 10vw;
+  margin-top: 5%;
+  font-weight: 700;
+}
+
+.info-row {
+  height: 60px;
+  width: 70%;
+  padding: 5%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+
+  .user-number {
+      font-size: 2rem;
+      margin: 4%;
+  }
+}
+
+.active-users {
+  margin-top: 2%;
+  background-color: white;
+}
+
+.inactive-users {
+  margin-top: 7%;
+  background-color: white;
+}
