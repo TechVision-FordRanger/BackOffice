@@ -2,7 +2,9 @@
   <div class="row no-gutters">
       <app-menu-lateral class="col-auto"></app-menu-lateral>
       <div class="col d-flex flex-column background-dark2">
-          <app-user-information class="flex-grow-1 center"></app-user-information>
+        <div class="flex-grow-1 center">
+          <router-outlet></router-outlet>
+        </div>
       </div>
       <app-footer></app-footer>
   </div>

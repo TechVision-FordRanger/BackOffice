@@ -5,4 +5,7 @@ img {
   height: 100vh;
 }
 
+.active-icon i {
+  color: white;
+}
 
