@@ -6,17 +6,19 @@ import { AppComponent } from './app.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserInformationComponent } from './user-information/user-information.component';
+import { AppInformationComponent } from './app-information/app-information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuLateralComponent,
     FooterComponent,
-    UserInformationComponent
+    UserInformationComponent,
+    AppInformationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
