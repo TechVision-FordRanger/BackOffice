@@ -61,4 +61,8 @@ export class UserInformationComponent {
     { user: 'Amanda Lima', state: 'Amapá', vehicle: 'Ranger 1975' }
   ];
 
+  userCount = '2.598';
+  activeUsers = '1245';
+  inactiveUsers = '3456';
+
 }

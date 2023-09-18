@@ -2,7 +2,7 @@
   <div class="row align-items-center gx-5">
     <!-- Container Retangular Deitado -->
     <div class="col-8">
-      <div class="usarios-localidades background-white">
+      <div class="users-location background-white">
         <div class="title">
           <p class="h2 font-bold">Usuários por Localidade</p>
           <i class="bi bi-globe-americas"></i>
@@ -50,7 +50,21 @@
 
     <!-- Container Retangular em Pé -->
     <div class="col-4">
-      <div class="total-usuarios background-white">Container em Pé</div>
+      <div class="total-users d-flex flex-column align-items-center justify-content-center">
+        <section class="user-circle mt-5">
+          <h1 class="user-count d-flex justify-content-center">{{ userCount }}</h1>
+          <p class="user-label d-flex justify-content-center">Usuários</p>
+        </section>
+        <div class="info-header font-bold d-flex">
+          <p>Informações:</p>
+        </div>
+        <div class="info-row active-users background-white d-flex align-items-center ">
+          Ativos nas ultimas 24h:
+          <p class="user-number d-flex m-4">{{ activeUsers }}</p></div>
+        <div class="info-row inactive-users background-white d-flex align-items-center">
+          Inativos a mais de 30 dias:
+          <p class="user-number d-flex m-4">{{ inactiveUsers }}</p></div>
+      </div>
     </div>
   </div>
 </div>
