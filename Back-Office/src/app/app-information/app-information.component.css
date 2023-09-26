@@ -1,0 +1,119 @@
+.custom-container {
+  height: 40vh;
+  position: relative;
+  /* margin-top: 3%; */
+  padding-top: 3% ;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-left: 15px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.filter-btn {
+  margin-right: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 0;
+}
+
+/* Analytics section */
+
+.blocks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.block {
+  height: 160px;
+  width: 380px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center; /* Alinhamento vertical */
+  justify-content: center; /* Alinhamento horizontal */
+}
+
+.block:not(:last-child) {
+  margin-right: 3%;
+}
+
+.block-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Alinha os itens no centro */
+  width: 90%; /* Ocupa 90% da largura do bloco, ajuste conforme necessário */
+}
+
+.block-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o texto à esquerda */
+  margin-right: 5%;
+  justify-content: center;
+  color: white;
+  line-height: 1;
+}
+
+.block-text p {
+  font-size: 1rem; /* Tamanho padrão para o primeiro texto */
+  align-self: center;
+}
+
+.block-text .bold {
+  font-size: 1.1rem; /* Tamanho maior para o segundo texto */
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.circle {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Faz o div se tornar um círculo */
+    border: 8px solid; /* Define a espessura e a cor do contorno */
+    background-color: transparent; /* Garante que o fundo seja transparente */
+    color: #909090; /* Cor do texto dentro do círculo */
+    font-weight: 700;
+}
+
+/* stock section */
+.stock-section {
+  margin-top: 20px; /* Espaçamento entre a seção anterior e a nova seção */
+}
+
+.stock-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 320px;
+  border-radius: 30px; /* Para manter o padrão de design */
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 767px) {
+  .blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block {
+    margin-bottom: 15px;
+  }
+
+  .block:not(:last-child) {
+    margin-right: 0;
+  }
+}
