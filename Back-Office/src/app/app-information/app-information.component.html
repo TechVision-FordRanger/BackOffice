@@ -1,1 +1,79 @@
-<p>app-information works!</p>
+<div class="container d-flex flex-column justify-content-center">
+  <div class="row align-items-center gx-5">
+    <div class="container-fluid custom-container">
+      <!-- Analytics Overview -->
+      <div class="header">
+        <h3 class="title">Analytics Overview</h3>
+        <button class="btn btn-primary filter-btn background-dark">
+          Filtro <i class="bi bi-filter"></i>
+        </button>
+      </div>
+
+      <div class="blocks">
+        <div class="block background-dark">
+          <div class="block-content">
+            <div class="block-text">
+              <p>Top Funcionalidade</p>
+              <p class="bold">{{ topFeature }}</p>
+            </div>
+            <div class="circle" [ngStyle]="{'border-color': getCircleColor(featurePercentage)}">
+              <span>{{ featurePercentage }}%</span> <!-- Exemplo de porcentagem -->
+            </div>
+          </div>
+        </div>
+
+        <div class="block background-dark">
+          <div class="block-content">
+            <div class="block-text">
+              <p>Visita diária no App</p>
+              <p class="bold">{{ appVisits }}</p>
+            </div>
+            <div class="circle" [ngStyle]="{'border-color': getCircleColor(visitsPercentage)}">
+              <span>{{ visitsPercentage }}%</span> <!-- Exemplo de porcentagem -->
+            </div>
+          </div>
+        </div>
+
+        <div class="block background-dark">
+          <div class="block-content">
+            <div class="block-text">
+              <p>Pedidos de Manutenção</p>
+              <p class="bold">{{ maintenanceRequests }}</p>
+            </div>
+            <div class="circle" [ngStyle]="{'border-color': getCircleColor(maintenancePercentage)}">
+              <span>{{ maintenancePercentage }}%</span> <!-- Exemplo de porcentagem -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="block background-dark">
+          <div class="block-content">
+            <div class="block-text">
+              <p>Emergências</p>
+              <p class="bold">{{ emergencies }}</p>
+            </div>
+            <div class="circle" [ngStyle]="{'border-color': getCircleColor(emergenciesPercentage)}">
+              <span>{{ emergenciesPercentage }}%</span> <!-- Exemplo de porcentagem -->
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Estoque de Peças -->
+      <div class="stock-section">
+        <div class="header">
+          <h3 class="title">Estoque de Peças</h3>
+          <button class="btn btn-primary filter-btn background-dark">
+            Filtro <i class="bi bi-filter"></i>
+          </button>
+        </div>
+        <div class="stock-container background-dark">
+          <!-- Conteúdo do container de estoque aqui -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

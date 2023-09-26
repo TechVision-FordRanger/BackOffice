@@ -1,6 +1,7 @@
 img {
-  width: 50px
+  width: 50px;
 }
+
 .background-dark {
   height: 100vh;
 }
@@ -8,4 +9,28 @@ img {
 .active-icon i {
   color: white;
 }
+
+.dropdown {
+  margin-top: auto; /* Isso empurra o ícone de perfil para a parte inferior em telas maiores */
+}
+
+@media (max-width: 767px) {
+  .d-flex.flex-sm-column {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .nav-pills {
+      flex-grow: 1;
+      justify-content: space-around;
+  }
+  .background-dark {
+      height: auto;
+  }
+  .dropdown {
+      margin-top: 0; /* Isso remove o espaçamento do ícone de perfil em telas menores */
+  }
+}
+
+
+
 
