@@ -9,7 +9,7 @@
         </button>
       </div>
 
-      <div class="blocks">
+      <div class="blocks background-dark3">
         <div class="block background-dark">
           <div class="block-content">
             <div class="block-text">
@@ -46,7 +46,6 @@
           </div>
         </div>
 
-
         <div class="block background-dark">
           <div class="block-content">
             <div class="block-text">
@@ -59,11 +58,10 @@
           </div>
         </div>
 
-
       </div>
 
       <!-- Estoque de Peças -->
-      <div class="stock-section">
+      <div class="stock-section background-dark3">
         <div class="header">
           <h3 class="title">Estoque de Peças</h3>
           <button class="btn btn-primary filter-btn background-dark">
@@ -71,9 +69,39 @@
           </button>
         </div>
         <div class="stock-container background-dark">
-          <!-- Conteúdo do container de estoque aqui -->
+          <div class="table-container table-responsive">
+            <table #headerTable class="table custom-border table-sm">
+              <!-- Cabeçalho da tabela -->
+              <thead>
+                <tr>
+                  <th class="text-center">Loja</th>
+                  <th class="text-center">Compra Id</th>
+                  <th class="text-center">Peça</th>
+                  <th class="text-center">Quantidade</th>
+                  <th class="text-center">Preço Unidade</th>
+                  <th class="text-center">Preço total</th>
+                  <th class="text-center">Estoque</th>
+                  <th class="text-center">Localização</th>
+                </tr>
+              </thead>
+              <!-- Corpo da tabela -->
+              <tbody>
+                <tr *ngFor="let data of dataList">
+                  <td class="text-center">{{ data.store }}</td>
+                  <td class="text-center">{{ data.requestId }}</td>
+                  <td class="text-center">{{ data.autoPart }}</td>
+                  <td class="text-center">{{ data.quantity }}</td>
+                  <td class="text-center">{{ data.unityPrice }}</td>
+                  <td class="text-center">{{ data.totalPrice }}</td>
+                  <td class="text-center">{{ data.stock }}</td>
+                  <td class="text-center">{{ data.storeLocation }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
