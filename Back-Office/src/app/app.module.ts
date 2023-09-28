@@ -7,8 +7,6 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserInformationComponent } from './user-information/user-information.component';
 import { AppInformationComponent } from './app-information/app-information.component';
-import {ModalFilterComponent} from "./modal-filter/modal-filter.component";
-import {ModalModule} from "ngx-bootstrap/modal";
 
 @NgModule({
   declarations: [
@@ -16,13 +14,11 @@ import {ModalModule} from "ngx-bootstrap/modal";
     MenuLateralComponent,
     FooterComponent,
     UserInformationComponent,
-    AppInformationComponent,
-    ModalFilterComponent
+    AppInformationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-      ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

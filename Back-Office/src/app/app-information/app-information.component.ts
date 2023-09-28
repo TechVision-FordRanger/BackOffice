@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {BsModalRef, BsModalService} from "ngx-bootstrap/modal";
-import {ModalFilterComponent} from "../modal-filter/modal-filter.component";
 
 @Component({
   selector: 'app-app-information',
@@ -21,8 +19,6 @@ export class AppInformationComponent {
 
   emergencies: string = "103";
   emergenciesPercentage: number = -140;
-
-  showModalFilter = false;
 
 
 
@@ -64,14 +60,9 @@ export class AppInformationComponent {
       { "store": "Ford MechElite", "requestId": "88990", "autoPart": "Escapamento", "quantity": "1", "unityPrice": "R$1100", "totalPrice": "R$1100", "stock": "3900", "storeLocation": "Limeira" }
     ];
 
-    closeFilterModal(){
-        this.showModalFilter =false;
-    }
-    openModal(){
-    this.bsModalRef = this.modalService.show(ModalFilterComponent);
-    }
-    bsModalRef!: BsModalRef<ModalFilterComponent>;
-  constructor(private modalService: BsModalService) {}
+
+
+  constructor() { }
 
   ngOnInit(): void { }
 
