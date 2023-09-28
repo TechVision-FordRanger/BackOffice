@@ -64,7 +64,7 @@
       <div class="stock-section background-dark3">
         <div class="header">
           <h3 class="title">Estoque de Peças</h3>
-          <button class="btn btn-primary filter-btn background-dark">
+          <button class="btn btn-primary filter-btn background-dark" (click)="showModalFilter=!showModalFilter">
             Filtro <i class="bi bi-filter"></i>
           </button>
         </div>
@@ -105,3 +105,4 @@
     </div>
   </div>
 </div>
+<app-modal-filter *ngIf="showModalFilter" (confirmEmitter)="closeFilterModal()" ></app-modal-filter>
