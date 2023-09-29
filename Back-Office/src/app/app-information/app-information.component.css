@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .custom-container {
   /* height: 40vh; */
   position: relative;
@@ -138,6 +142,7 @@ table thead th {
 
 /* Media query para telas pequenas */
 @media (max-width: 767px) {
+
   .blocks {
     flex-direction: column;
     align-items: center;
@@ -145,6 +150,8 @@ table thead th {
 
   .block {
     margin-bottom: 15px;
+    width: 100%;
+    max-width: 380px;
   }
 
   .block:not(:last-child) {
@@ -153,8 +160,9 @@ table thead th {
 
   .stock-container {
     height: auto;
+    width: 100%;
     padding-left: 10%;
-    padding-right: 5%;
+    padding-right: 10%;
     padding-bottom: 10%;
   }
 
@@ -163,11 +171,11 @@ table thead th {
   }
 
   .header .filter-btn {
-    margin-right: 15%;
+    margin-right: 18%;
   }
 
   .table-container {
-    max-width: 95%; /* reduz a largura máxima para 95% da largura do container */
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
