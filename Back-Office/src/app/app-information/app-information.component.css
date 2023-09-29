@@ -160,10 +160,8 @@ table thead th {
 
   .stock-container {
     height: auto;
+    margin-bottom: 15%;
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 10%;
   }
 
   .header .title {
@@ -172,6 +170,7 @@ table thead th {
 
   .header .filter-btn {
     margin-right: 18%;
+
   }
 
   .table-container {
