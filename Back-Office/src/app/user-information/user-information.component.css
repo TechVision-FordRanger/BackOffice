@@ -7,7 +7,7 @@
   height: 500px;
   width: 100%;
   border-radius: 30px;
-  padding-top: 20px;
+  padding-top: 2vh;
 }
 
 .title{
@@ -67,8 +67,8 @@
 }
 
 .container-fluid{
-  padding-right: 6%;
-  padding-left: 6%;
+  padding-right: 2vw;
+  padding-left: 2vw;
 }
 
 .back {
