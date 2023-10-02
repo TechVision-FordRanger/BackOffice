@@ -42,8 +42,12 @@
 
 }
 .close{
-  margin-right: 50px;
-  width: 100%;
+  align-self: flex-start;
+  background: none; /* Remover o fundo padrão */
+  border: none; /* Remover bordas padrão */
+  padding: 0; /* Remover o padding padrão */
+  outline: none; /* Remover o outline ao focar */
+  cursor: pointer; /* Mostrar o cursor como um ponteiro */
 }
 
 
