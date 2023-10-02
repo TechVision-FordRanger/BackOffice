@@ -9,6 +9,7 @@ import { UserInformationComponent } from './user-information/user-information.co
 import { AppInformationComponent } from './app-information/app-information.component';
 import {ModalFilterComponent} from "./modal-filter/modal-filter.component";
 import {ModalModule} from "ngx-bootstrap/modal";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {ModalModule} from "ngx-bootstrap/modal";
     BrowserModule,
     AppRoutingModule,
       ModalModule.forRoot(),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -71,6 +71,25 @@ export class AppInformationComponent {
     this.bsModalRef = this.modalService.show(ModalFilterComponent);
     }
     bsModalRef!: BsModalRef<ModalFilterComponent>;
+
+  applyFilter(filterValues: { country: string, state: string, date: string }) {
+
+    let filteredData = [...this.dataList];
+
+    // Filtre com base no país (se for selecionado)
+    if (filterValues.country) {
+      filteredData = filteredData.filter(data => data.storeLocation === filterValues.country);
+    }
+
+    // Filtre com base no estado (se for selecionado)
+    if (filterValues.state) {
+      filteredData = filteredData.filter(data => data.storeLocation === filterValues.state);
+    }
+
+
+    this.dataList = filteredData;
+  }
+
   constructor(private modalService: BsModalService) {}
 
   ngOnInit(): void { }

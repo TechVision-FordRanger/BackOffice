@@ -27,17 +27,25 @@
     width: 100%;
 }
 
-.dropdown{
-    width:100%;
-    text-align: center;
+.form-control{
+  width: 60%;
+  border-radius: 20px;
+  border: none;
+  background-color: #EEEEEE;
+  margin-bottom: 30px;
 }
 
-.dropdown button, .dropdown ul{
-    width: 60%;
-    border-radius: 20px;
-    background-color: #051A35;
-    border: none;
+.config{
+  font-size: 30px;
+  color: #EEEEEE;
+
+
 }
+.close{
+  margin-right: 50px;
+  width: 100%;
+}
+
 
 .dropdown-item{
     color: white;

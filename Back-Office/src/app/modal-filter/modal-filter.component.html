@@ -1,43 +1,29 @@
 <div class="container-modal background-dark d-flex flex-column">
-    <div class="header-modal d-flex justify-content-center">
-        <h2 class="name-container font-bold">Filtros <i class="bi bi-filter"></i> </h2>
-    </div>
+  <div class="close"><i class=" config bi bi-x-circle-fill" (click)="closeEvent()"></i></div>
 
-    <div class="dropdown marginButton mb-2 ml-auto">
-        <button class="btn btn-secondary dropdown-toggle background-dark btnStyle" type="button"
-                id="countriesButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Selecione País
-        </button>
-        <ul class="dropdown-menu dropStyle" aria-labelledby="countriesButton">
-            <li><a class="dropdown-item" href="#">Brasil</a></li>
-            <li><a class="dropdown-item" href="#">U.S.A</a></li>
-            <li><a class="dropdown-item" href="#">Argentina</a></li>
-        </ul>
-    </div>
+  <div class="header-modal d-flex justify-content-center">
+    <h2 class="name-container font-bold">Filtros <i class="bi bi-filter"></i></h2>
+  </div>
 
-    <div class="dropdown marginButton mb-2 ml-auto">
-        <button class="btn btn-secondary dropdown-toggle background-dark btnStyle" type="button"
-                id="stateButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Selecione Estado
-        </button>
-        <ul class="dropdown-menu dropStyle" aria-labelledby="countriesButton">
-            <li><a class="dropdown-item" href="#">São Paulo</a></li>
-            <li><a class="dropdown-item" href="#">California</a></li>
-            <li><a class="dropdown-item" href="#">Buenos Aires</a></li>
-        </ul>
-    </div>
+  <!-- Dropdown para País -->
+  <select [(ngModel)]="selectedCountry" class="form-control">
+    <option class="teste" value="" disabled selected>Selecione um país</option>
+    <option value="Brasil">Brasil</option>
+    <option value="U.S.A">U.S.A</option>
+    <option value="Argentina">Argentina</option>
+  </select>
 
-    <div class="dropdown marginButton mb-2 ml-auto">
-        <button class="btn btn-secondary dropdown-toggle background-dark btnStyle" type="button"
-                id="dateButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Selecione Data
-        </button>
-        <ul class="dropdown-menu dropStyle" aria-labelledby="countriesButton">
-            <li><a class="dropdown-item" href="#">11/11/2023</a></li>
-            <li><a class="dropdown-item" href="#">22/02/2023</a></li>
-            <li><a class="dropdown-item" href="#">31/04/2023</a></li>
-        </ul>
-    </div>
-    <button class="button font-bold" (click)="confirmFilter()"> Confirmar</button>
+  <!-- Dropdown para Estado -->
+  <select [(ngModel)]="selectedState" class="form-control" [disabled]="!selectedCountry">
+    <option value="" disabled selected>Selecione um estado</option>
+    <option value="São Paulo">São Paulo</option>
+    <option value="Rio de Janeiro">Rio de Janeiro</option>
+    <option value="Minas Gerais">Minas Gerais</option>
+  </select>
+
+  <!-- Dropdown para Data -->
+  <input [(ngModel)]="selectedDate" type="date" class="form-control" [disabled]="!selectedCountry || !selectedState">
+
+  <button class="button font-bold" (click)="confirmFilter()"> Confirmar</button>
 
 </div>
