@@ -15,6 +15,14 @@ body {
   align-items: center;
 }
 
+.buttons-filter{
+  width: 30%;
+}
+
+.buttons-filter button{
+  width: 70%;
+}
+
 .title {
   margin-left: 15px;
   font-size: 2rem;

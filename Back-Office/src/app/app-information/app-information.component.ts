@@ -34,6 +34,8 @@ export class AppInformationComponent {
     }
   }
 
+  originalDataList: any[] = [];
+
   dataList =
     [
       { "store": "Ford Elite Motors", "requestId": "12345", "autoPart": "Pneu", "quantity": "2", "unityPrice": "R$900", "totalPrice": "R$1800", "stock": "15000", "storeLocation": "São Paulo" },
@@ -64,7 +66,7 @@ export class AppInformationComponent {
       { "store": "Ford MechElite", "requestId": "88990", "autoPart": "Escapamento", "quantity": "1", "unityPrice": "R$1100", "totalPrice": "R$1100", "stock": "3900", "storeLocation": "Limeira" }
     ];
 
-    closeFilterModal(){
+    closeEmitter(){
         this.showModalFilter =false;
     }
     openModal(){
@@ -73,25 +75,22 @@ export class AppInformationComponent {
     bsModalRef!: BsModalRef<ModalFilterComponent>;
 
   applyFilter(filterValues: { country: string, state: string, date: string }) {
+    let filteredData = [...this.originalDataList];
 
-    let filteredData = [...this.dataList];
-
-    // Filtre com base no país (se for selecionado)
-    if (filterValues.country) {
-      filteredData = filteredData.filter(data => data.storeLocation === filterValues.country);
-    }
-
-    // Filtre com base no estado (se for selecionado)
+    // Filtre com base na cidade (se for selecionada)
     if (filterValues.state) {
       filteredData = filteredData.filter(data => data.storeLocation === filterValues.state);
     }
 
-
     this.dataList = filteredData;
+    this.showModalFilter =false;
+  }
+
+  resetFilter(){
+    this.dataList = this.originalDataList;
   }
 
   constructor(private modalService: BsModalService) {}
 
-  ngOnInit(): void { }
-
+  ngOnInit(): void { this.originalDataList = [...this.dataList]; }
 }

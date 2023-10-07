@@ -31,9 +31,8 @@ export class ModalFilterComponent {
 
     this.bsModalRef.hide();
   }
-
   closeEvent(){
-    this.confirmEmitter.emit();
+    this.closeEmitter.emit()
   }
 
 }

@@ -7,18 +7,20 @@
 
   <!-- Dropdown para País -->
   <select [(ngModel)]="selectedCountry" class="form-control">
-    <option class="teste" value="" disabled selected>Selecione um país</option>
+    <option value="" disabled selected>Selecione um país</option>
     <option value="Brasil">Brasil</option>
-    <option value="U.S.A">U.S.A</option>
-    <option value="Argentina">Argentina</option>
   </select>
 
   <!-- Dropdown para Estado -->
   <select [(ngModel)]="selectedState" class="form-control" [disabled]="!selectedCountry">
-    <option value="" disabled selected>Selecione um estado</option>
+    <option value="" disabled selected>Selecione uma Cidade</option>
     <option value="São Paulo">São Paulo</option>
-    <option value="Rio de Janeiro">Rio de Janeiro</option>
-    <option value="Minas Gerais">Minas Gerais</option>
+    <option value="Mogi das Cruzes">Mogi das Cruzes</option>
+    <option value="Campinas">Campinas</option>
+    <option value="Osasco">Osasco</option>
+    <option value="Sorocaba">Sorocaba</option>
+    <option value="Ribeirão Preto">Ribeirão preto</option>
+    <option value="Santos">Santos</option>
   </select>
 
   <!-- Dropdown para Data -->
