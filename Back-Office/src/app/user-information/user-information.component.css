@@ -96,10 +96,6 @@ table thead th {
   color: white;
 }
 
-.table-container tbody {
-  display: block;
-}
-
 .table-container thead,
 .table-container tbody tr {
   display: table;
