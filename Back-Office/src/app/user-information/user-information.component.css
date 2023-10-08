@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.card-sizing {
+ height: 500px ;
+}
+
+.responsive-group-container {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
 .users-location {
   height: 500px;
   width: 100%;
@@ -124,22 +132,36 @@ table thead th {
 /*container total de usuarios */
 
 .total-users {
-  height: 600px;
+  height: 500px;
   width: 100%;
   border-radius: 30px;
   background-color: #EEEEEE;
 }
 
-
 .user-circle {
-  width: 25vmin;
-  height: 25vmin;
-  border-radius: 50%;
+  width: 20vmin;
+  height: 20vmin;
   background-color: #051A35;
   margin-bottom: 0px;
-  position: relative;
-  top: -10%; /* Ajuste conforme necessário */
+  @media  (min-width: 1188px) {
+    .user-circle {
+      width: 15vmin ;
+      height: 15vmin ;
+    }
+    .user-sizing{
+      font-size: 1.8rem;
+    }
+  }
 
+  @media  (min-width: 767px) {
+   .user-circle {
+     width: 20vmin !important;
+     height: 20vmin !important;
+   }
+    .user-sizing{
+      font-size: 1.8rem;
+    }
+ }
 
   .user-count {
     color: #EEEEEE;
