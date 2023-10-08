@@ -1,7 +1,7 @@
 <div class="container d-flex flex-column justify-content-center">
-  <div class="row align-items-center gx-5">
+  <div class="row responsive-group-container align-items-center justify-content-center gx-5">
     <!-- Container Retangular Deitado -->
-    <div class="col-8">
+    <div class="card-sizing  col-md-10 col-10 col-xl-8">
       <div class="users-location background-white">
         <div class="title">
           <p class="h2 font-bold">Usuários por Localidade</p>
@@ -27,17 +27,17 @@
             >
               <li>
                 <a class="dropdown-item" href="#" (click)="setCountry('BR')"
-                  >Brasil</a
+                >Brasil</a
                 >
               </li>
               <li>
                 <a class="dropdown-item" href="#" (click)="setCountry('US')"
-                  >U.S.A</a
+                >U.S.A</a
                 >
               </li>
               <li>
                 <a class="dropdown-item" href="#" (click)="setCountry('AR')"
-                  >Argentina</a
+                >Argentina</a
                 >
               </li>
             </ul>
@@ -48,19 +48,19 @@
               <table #headerTable class="table table-sm">
                 <!-- Cabeçalho da tabela -->
                 <thead>
-                  <tr>
-                    <th class="text-center">Usuario</th>
-                    <th class="text-center">{{countryKey === 'state' ? 'Estado' : 'Cidade'}}</th>
-                    <th class="text-center">Veículo</th>
-                  </tr>
+                <tr>
+                  <th class="text-center">Usuario</th>
+                  <th class="text-center">{{countryKey === 'state' ? 'Estado' : 'Cidade'}}</th>
+                  <th class="text-center">Veículo</th>
+                </tr>
                 </thead>
                 <!-- Corpo da tabela -->
                 <tbody>
-                  <tr *ngFor="let data of dataList">
-                    <td class="text-center">{{ data.user }}</td>
-                    <td class="text-center">{{data[countryKey]}}</td>
-                    <td class="text-center">{{ data.vehicle }}</td>
-                  </tr>
+                <tr *ngFor="let data of dataList">
+                  <td class="text-center">{{ data.user }}</td>
+                  <td class="text-center">{{data[countryKey]}}</td>
+                  <td class="text-center">{{ data.vehicle }}</td>
+                </tr>
                 </tbody>
               </table>
             </div>
@@ -69,31 +69,34 @@
       </div>
     </div>
 
+
     <!-- Container Retangular em Pé -->
-    <div class="col-4">
+    <div class="card-sizing col-xl-4 col-10 mt-xl-0 mt-5">
       <div
-        class="total-users d-flex flex-column align-items-center justify-content-center"
+        class="total-users pt-1 pb-2 d-flex flex-column align-items-center justify-content-center"
       >
-        <section class="user-circle mt-5">
-          <h1 class="user-count d-flex justify-content-center">
+        <section class="user-circle rounded-circle">
+          <h1 class="user-sizing user-count  d-flex justify-content-center ">
             {{ userCount }}
           </h1>
-          <p class="user-label d-flex justify-content-center">Usuários</p>
+          <p class="user-label d-flex justify-content-center user-sizing">Usuários</p>
         </section>
         <div class="info-header font-bold d-flex">
           <p>Informações:</p>
         </div>
-        <div
-          class="info-row active-users background-white d-flex align-items-center"
-        >
-          Ativos nas ultimas 24h:
-          <p class="user-number d-flex m-4">{{ activeUsers }}</p>
-        </div>
-        <div
-          class="info-row inactive-users background-white d-flex align-items-center"
-        >
-          Inativos a mais de 30 dias:
-          <p class="user-number d-flex m-4">{{ inactiveUsers }}</p>
+        <div class=" d-flex container-fluid row justify-content-center space-align-between gap-2">
+          <div
+            class="info-row background-white d-flex align-items-center"
+          >
+            Ativos nas ultimas 24h:
+            <p class="user-number d-flex m-4">{{ activeUsers }}</p>
+          </div>
+          <div
+            class="info-row  background-white d-flex align-items-center"
+          >
+            Inativos a mais de 30 dias:
+            <p class="user-number d-flex m-4">{{ inactiveUsers }}</p>
+          </div>
         </div>
       </div>
     </div>

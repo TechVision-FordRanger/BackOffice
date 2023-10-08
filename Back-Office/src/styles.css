@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 .background-dark {
   background-color: #003478;
@@ -10,14 +11,10 @@
 
 .background-dark2 {
   background-color: #051A35;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  height: calc(100vh - 56px);
 }
 
-.background-dark3 {
+body {
   background-color: #051A35;
-
 }
 
 .custom-container {
