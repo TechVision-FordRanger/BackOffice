@@ -7,18 +7,40 @@
           <p class="h2 font-bold">Usuários por Localidade</p>
           <i class="bi bi-globe-americas"></i>
         </div>
-        <div class="container-grid background-dark3 d-flex flex-column align-items-start">
+        <div
+          class="container-grid background-dark3 d-flex flex-column align-items-start"
+        >
           <!-- Dropdown -->
           <div class="dropdown marginButton mb-2 ml-auto">
-              <button class="btn btn-secondary dropdown-toggle background-dark btnStyle" type="button"
-                  id="countriesButton" data-bs-toggle="dropdown" aria-expanded="false">
-                  Selecione País
-              </button>
-              <ul class="dropdown-menu dropStyle" aria-labelledby="countriesButton">
-                  <li><a class="dropdown-item" href="#">Brasil</a></li>
-                  <li><a class="dropdown-item" href="#">U.S.A</a></li>
-                  <li><a class="dropdown-item" href="#">Argentina</a></li>
-              </ul>
+            <button
+              class="btn btn-secondary dropdown-toggle background-dark btnStyle"
+              type="button"
+              id="countriesButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Selecione País
+            </button>
+            <ul
+              class="dropdown-menu dropStyle"
+              aria-labelledby="countriesButton"
+            >
+              <li>
+                <a class="dropdown-item" href="#" (click)="setCountry('BR')"
+                  >Brasil</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="setCountry('US')"
+                  >U.S.A</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="setCountry('AR')"
+                  >Argentina</a
+                >
+              </li>
+            </ul>
           </div>
 
           <div class="container-fluid flex-grow-1 back">
@@ -26,44 +48,53 @@
               <table #headerTable class="table table-sm">
                 <!-- Cabeçalho da tabela -->
                 <thead>
-                    <tr>
-                        <th class="text-center">Usuario</th>
-                        <th class="text-center">Estado</th>
-                        <th class="text-center">Veículo</th>
-                    </tr>
+                  <tr>
+                    <th class="text-center">Usuario</th>
+                    <th class="text-center">{{countryKey === 'state' ? 'Estado' : 'Cidade'}}</th>
+                    <th class="text-center">Veículo</th>
+                  </tr>
                 </thead>
                 <!-- Corpo da tabela -->
                 <tbody>
-                    <tr *ngFor="let data of dataList">
-                        <td class="text-center">{{ data.user }}</td>
-                        <td class="text-center">{{ data.state }}</td>
-                        <td class="text-center">{{ data.vehicle }}</td>
-                    </tr>
+                  <tr *ngFor="let data of dataList">
+                    <td class="text-center">{{ data.user }}</td>
+                    <td class="text-center">{{data[countryKey]}}</td>
+                    <td class="text-center">{{ data.vehicle }}</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
+          </div>
         </div>
-      </div>
-
       </div>
     </div>
 
     <!-- Container Retangular em Pé -->
     <div class="col-xl-4 col-10 mt-xl-0 mt-5">
-      <div class="total-users d-flex flex-column align-items-center justify-content-center">
+      <div
+        class="total-users d-flex flex-column align-items-center justify-content-center"
+      >
         <section class="user-circle mt-5">
-          <h1 class="user-count d-flex justify-content-center">{{ userCount }}</h1>
+          <h1 class="user-count d-flex justify-content-center">
+            {{ userCount }}
+          </h1>
           <p class="user-label d-flex justify-content-center">Usuários</p>
         </section>
         <div class="info-header font-bold d-flex">
           <p>Informações:</p>
         </div>
-        <div class="info-row active-users background-white d-flex align-items-center ">
+        <div
+          class="info-row active-users background-white d-flex align-items-center"
+        >
           Ativos nas ultimas 24h:
-          <p class="user-number d-flex m-4">{{ activeUsers }}</p></div>
-        <div class="info-row inactive-users background-white d-flex align-items-center">
+          <p class="user-number d-flex m-4">{{ activeUsers }}</p>
+        </div>
+        <div
+          class="info-row inactive-users background-white d-flex align-items-center"
+        >
           Inativos a mais de 30 dias:
-          <p class="user-number d-flex m-4">{{ inactiveUsers }}</p></div>
+          <p class="user-number d-flex m-4">{{ inactiveUsers }}</p>
+        </div>
       </div>
     </div>
   </div>
