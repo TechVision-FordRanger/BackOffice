@@ -4,9 +4,14 @@
       <!-- Analytics Overview -->
       <div class="header">
         <h3 class="title">Analytics Overview</h3>
-        <button class="btn btn-primary filter-btn background-dark" (click)="showModalFilter=!showModalFilter">
-          Filtro <i class="bi bi-filter"></i>
-        </button>
+        <div class="buttons-filter d-flex">
+          <button class="btn btn-primary filter-btn background-dark" (click)="showModalFilter=!showModalFilter">
+            Filtro <i class="bi bi-filter"></i>
+          </button>
+          <button class="btn btn-primary filter-btn background-dark" (click)="resetFilter()">
+            Limpar FIltros
+          </button>
+        </div>
       </div>
 
       <div class="blocks background-dark3">
