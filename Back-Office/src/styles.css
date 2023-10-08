@@ -10,14 +10,10 @@
 
 .background-dark2 {
   background-color: #051A35;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  height: calc(100vh - 56px);
 }
 
-.background-dark3 {
+body {
   background-color: #051A35;
-
 }
 
 .custom-container {
