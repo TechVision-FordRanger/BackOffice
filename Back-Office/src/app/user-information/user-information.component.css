@@ -42,16 +42,21 @@
 }
 
 .marginButton{
-  margin-left: 78%;
   margin-top: 2%;
+}
+
+.margin-desespero{
+  @media (max-width: 991px) {
+    margin-left: -21px !important;
+  }
 }
 
 .btnStyle{
   border-radius: 30px;
   border-color: white;
   font-size: 12px;
-  padding-right: 30% ;
-  padding-left: 30% ;
+  /*padding-right: 30% ;*/
+  /*padding-left: 30% ;*/
   font-weight: 600;
 }
 
@@ -139,29 +144,41 @@ table thead th {
 }
 
 .user-circle {
-  width: 20vmin;
-  height: 20vmin;
+  width: 140px;
+  height: 140px;
   background-color: #051A35;
   margin-bottom: 0px;
   @media  (min-width: 1188px) {
     .user-circle {
-      width: 15vmin ;
-      height: 15vmin ;
+      width: 40vmin ;
+      height: 40vmin ;
     }
     .user-sizing{
-      font-size: 1.8rem;
+      font-size: 1rem;
     }
   }
 
   @media  (min-width: 767px) {
    .user-circle {
-     width: 20vmin !important;
-     height: 20vmin !important;
+     width: 40vmin !important;
+     height: 40vmin !important;
    }
     .user-sizing{
       font-size: 1.8rem;
     }
  }
+  @media  (min-width: 575px) {
+    .user-circle {
+      width: 40vmin !important;
+      height: 40vmin !important;
+    }
+    .user-sizing{
+      font-size: 1.5rem;
+    }
+    .user-info-sizing{
+      font-size: 1.5rem !important;
+    }
+  }
 
   .user-count {
     color: #EEEEEE;

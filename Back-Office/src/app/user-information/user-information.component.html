@@ -2,67 +2,70 @@
   <div class="row responsive-group-container align-items-center justify-content-center gx-5">
     <!-- Container Retangular Deitado -->
     <div class="card-sizing  col-md-10 col-10 col-xl-8">
-      <div class="users-location background-white">
+      <div class="users-location background-white d-flex flex-column">
         <div class="title">
-          <p class="h2 font-bold">Usuários por Localidade</p>
-          <i class="bi bi-globe-americas"></i>
+          <p class="h2 my-0 font-bold text-center">Usuários por Localidade</p>
+          <i class="bi bi-globe-americas col-3 col-sm-1"></i>
         </div>
         <div
-          class="container-grid background-dark3 d-flex flex-column align-items-start"
+          class="container-grid background-dark3 d-flex flex-column align-items-start mx-2"
         >
           <!-- Dropdown -->
-          <div class="dropdown marginButton mb-2 ml-auto">
-            <button
-              class="btn btn-secondary dropdown-toggle background-dark btnStyle"
-              type="button"
-              id="countriesButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Selecione País
-            </button>
-            <ul
-              class="dropdown-menu dropStyle"
-              aria-labelledby="countriesButton"
-            >
-              <li>
-                <a class="dropdown-item" href="#" (click)="setCountry('BR')"
-                >Brasil</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="#" (click)="setCountry('US')"
-                >U.S.A</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="#" (click)="setCountry('AR')"
-                >Argentina</a
-                >
-              </li>
-            </ul>
+          <div class="align-items-center justify-content-center p-0 w-100">
+            <div class="d-flex dropdown marginButton mb-2 ml-auto w-100 justify-content-center">
+              <button
+                class="background-dark btn btn-secondary btnStyle dropdown-toggle mt-2 mt-sm-0 px-sm-4"
+                type="button"
+                id="countriesButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Selecione País
+              </button>
+              <ul
+                class="dropdown-menu dropStyle"
+                aria-labelledby="countriesButton"
+              >
+                <li>
+                  <a class="dropdown-item" href="#" (click)="setCountry('BR')"
+                  >Brasil</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" (click)="setCountry('US')"
+                  >U.S.A</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" (click)="setCountry('AR')"
+                  >Argentina</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="container-fluid flex-grow-1 back">
-            <div class="table-container">
-              <table #headerTable class="table table-sm">
-                <!-- Cabeçalho da tabela -->
-                <thead>
-                <tr>
-                  <th class="text-center">Usuario</th>
-                  <th class="text-center">{{countryKey === 'state' ? 'Estado' : 'Cidade'}}</th>
-                  <th class="text-center">Veículo</th>
-                </tr>
-                </thead>
-                <!-- Corpo da tabela -->
-                <tbody>
-                <tr *ngFor="let data of dataList">
-                  <td class="text-center">{{ data.user }}</td>
-                  <td class="text-center">{{data[countryKey]}}</td>
-                  <td class="text-center">{{ data.vehicle }}</td>
-                </tr>
-                </tbody>
-              </table>
+          <div>
+            <div class="container-fluid  flex-grow-1 back">
+              <div class="table-container">
+                <table #headerTable class="table table-sm">
+                  <!-- Cabeçalho da tabela -->
+                  <thead>
+                  <tr>
+                    <th class="text-center">Usuario</th>
+                    <th class="text-center">{{countryKey === 'state' ? 'Estado' : 'Cidade'}}</th>
+                    <th class="text-center">Veículo</th>
+                  </tr>
+                  </thead>
+                  <!-- Corpo da tabela -->
+                  <tbody>
+                  <tr *ngFor="let data of dataList">
+                    <td class="text-center">{{ data.user }}</td>
+                    <td class="text-center">{{data[countryKey]}}</td>
+                    <td class="text-center">{{ data.vehicle }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -79,20 +82,20 @@
           <h1 class="user-sizing user-count  d-flex justify-content-center ">
             {{ userCount }}
           </h1>
-          <p class="user-label d-flex justify-content-center user-sizing">Usuários</p>
+          <p class="user-label d-flex justify-content-center user-info-sizing user-sizing">Usuários</p>
         </section>
         <div class="info-header font-bold d-flex">
           <p>Informações:</p>
         </div>
-        <div class=" d-flex container-fluid row justify-content-center space-align-between gap-2">
+        <div class=" d-flex row justify-content-center space-align-between gap-2">
           <div
-            class="info-row background-white d-flex align-items-center"
+            class="align-items-center background-white d-flex info-row justify-content-between p-2"
           >
             Ativos nas ultimas 24h:
             <p class="user-number d-flex m-4">{{ activeUsers }}</p>
           </div>
           <div
-            class="info-row  background-white d-flex align-items-center"
+            class="align-items-center background-white d-flex info-row justify-content-between p-2"
           >
             Inativos a mais de 30 dias:
             <p class="user-number d-flex m-4">{{ inactiveUsers }}</p>
