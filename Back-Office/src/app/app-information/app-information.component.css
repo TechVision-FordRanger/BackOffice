@@ -194,8 +194,8 @@ table thead th {
   }
 
   .buttons-filter button {
-    width: 15%;  /* Ajuste a largura do botão conforme necessário */
-    font-size: 12px;  /* Ajuste o tamanho da fonte do botão conforme necessário */
+    width: 15%;
+    font-size: 12px;
     margin-right: 10%;
   }
 
