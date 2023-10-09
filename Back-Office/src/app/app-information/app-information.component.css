@@ -37,6 +37,12 @@ body {
   border: 0;
 }
 
+.bi-brush {
+  font-size: 0.8em;
+  margin-left: 2%;
+}
+
+
 /* Analytics section */
 
 .blocks {
@@ -150,7 +156,6 @@ table thead th {
 
 /* Media query para telas pequenas */
 @media (max-width: 767px) {
-
   .blocks {
     flex-direction: column;
     align-items: center;
@@ -174,18 +179,24 @@ table thead th {
     padding-bottom: 10%;
   }
 
-  .header .title {
-    padding-left: 15%;
-  }
-
-  .header .filter-btn {
-    margin-right: 18%;
-  }
-
   .table-container {
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .btn-text {
+    display: none;
+  }
+
+  .header .title {
+    padding-left: 15%;
+  }
+
+  .buttons-filter button {
+    width: 15%;
+    font-size: 12px;
+    margin-right: 10%;
   }
 
 }

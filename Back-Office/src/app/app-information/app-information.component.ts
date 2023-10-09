@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {BsModalRef, BsModalService} from "ngx-bootstrap/modal";
-import {ModalFilterComponent} from "../user-information/modal-filter/modal-filter.component";
+import {ModalFilterComponent} from "./modal-filter/modal-filter.component";
 
 @Component({
   selector: 'app-app-information',
