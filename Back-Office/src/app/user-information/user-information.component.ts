@@ -14,6 +14,13 @@ import {
 export class UserInformationComponent {
   dataList: any[] = [];
   countryKey: string = 'state';
+  selectedCountry: string = 'Selecione País';
+
+  countryNameMap: { [key: string]: string } = {
+    'BR': 'Brasil',
+    'US': 'U.S.A',
+    'AR': 'Argentina'
+  };
 
   dataListBr = [
     { user: 'João Alves', state: 'Pernambuco', vehicle: 'Ranger 2024' },
@@ -219,6 +226,7 @@ export class UserInformationComponent {
   }
 
   setCountry(countryCode: string) {
+    this.selectedCountry = this.countryNameMap[countryCode];
     switch (countryCode) {
       case 'BR':
         this.dataList = this.dataListBr;

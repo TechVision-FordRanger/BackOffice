@@ -6,10 +6,10 @@
         <h3 class="title">Analytics Overview</h3>
         <div class="buttons-filter d-flex">
           <button class="btn btn-primary filter-btn background-dark" (click)="showModalFilter=!showModalFilter">
-            Filtro <i class="bi bi-filter"></i>
+            <span class="btn-text"> Filtro </span> <i class="bi bi-filter"></i>
           </button>
           <button class="btn btn-primary filter-btn background-dark" (click)="resetFilter()">
-            Limpar FIltros
+            <span class="btn-text"> Limpar Filtros </span> <i class="bi bi-brush"></i>
           </button>
         </div>
       </div>
@@ -22,7 +22,7 @@
               <p class="bold">{{ topFeature }}</p>
             </div>
             <div class="circle" [ngStyle]="{'border-color': getCircleColor(featurePercentage)}">
-              <span>{{ featurePercentage }}%</span> <!-- Exemplo de porcentagem -->
+              <span>{{ featurePercentage }}%</span>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
               <p class="bold">{{ appVisits }}</p>
             </div>
             <div class="circle" [ngStyle]="{'border-color': getCircleColor(visitsPercentage)}">
-              <span>{{ visitsPercentage }}%</span> <!-- Exemplo de porcentagem -->
+              <span>{{ visitsPercentage }}%</span>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
               <p class="bold">{{ emergencies }}</p>
             </div>
             <div class="circle" [ngStyle]="{'border-color': getCircleColor(emergenciesPercentage)}">
-              <span>{{ emergenciesPercentage }}%</span> <!-- Exemplo de porcentagem -->
+              <span>{{ emergenciesPercentage }}%</span>
             </div>
           </div>
         </div>
@@ -70,12 +70,12 @@
         <div class="header">
           <h3 class="title">Estoque de Peças</h3>
           <div class="buttons-filter d-flex">
-          <button class="btn btn-primary filter-btn background-dark" (click)="showModalFilter=!showModalFilter">
-            Filtro <i class="bi bi-filter"></i>
-          </button>
-          <button class="btn btn-primary filter-btn background-dark" (click)="resetFilter()">
-            Limpar FIltros
-          </button>
+            <button class="btn btn-primary filter-btn background-dark" (click)="showModalFilter=!showModalFilter">
+              <span class="btn-text"> Filtro </span> <i class="bi bi-filter"></i>
+            </button>
+            <button class="btn btn-primary filter-btn background-dark" (click)="resetFilter()">
+              <span class="btn-text"> Limpar Filtros </span> <i class="bi bi-brush"></i>
+            </button>
           </div>
         </div>
         <div class="stock-container background-dark">
