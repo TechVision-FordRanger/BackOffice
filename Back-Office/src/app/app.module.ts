@@ -7,7 +7,7 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserInformationComponent } from './user-information/user-information.component';
 import { AppInformationComponent } from './app-information/app-information.component';
-import {ModalFilterComponent} from "./user-information/modal-filter/modal-filter.component";
+import {ModalFilterComponent} from "./app-information/modal-filter/modal-filter.component";
 import {ModalModule} from "ngx-bootstrap/modal";
 import {FormsModule} from "@angular/forms";
 
